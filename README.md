@@ -22,7 +22,11 @@
 
 常用brew命令：
 ~~~markdown
+brew config               # 查看全局配置
+brew doctor               # 检查一下brew所安装的全部应用资源是否有问题
+brew info xxx             # 显示软件内容信息
 brew update               # 更新brew版本
+brew upgrade              # 升级所有已安装的应用程序包
 brew list                 # 本地已安装软件库列表
 brew search xxx           # 查找软件包
 brew install xxx          # 安装软件包
@@ -31,4 +35,6 @@ brew cask install xxx     # 安装软件
 brew cask uninstall xxx
 ~~~
 
-&emsp;brew还会创建自己的缓存目录$HOME/Library/Caches/Homebrew，brew会将其作为资源下载的缓存目录。与
+&emsp;brew还会创建自己的缓存目录$HOME/Library/Caches/Homebrew，brew会将其作为资源下载的缓存目录。其它应用也与Homebrew应用类似，都会在$HOME/Library/Caches目录下建立自己的缓存目录。
+
+&emsp;可以通过删除$HOME/Library/Caches这个目录下的全部缓存文件，以此释放一些被占用的存储空间，增加可用存储空间，但删除前要确认删除这些文件所带来的影响。
