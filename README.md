@@ -40,3 +40,10 @@ brew cask uninstall xxx
 &emsp;brew还会创建自己的缓存目录$HOME/Library/Caches/Homebrew，brew会将其作为资源下载的缓存目录。其它应用也与Homebrew应用类似，都会在$HOME/Library/Caches目录下建立自己的缓存目录。
 
 &emsp;可以通过删除$HOME/Library/Caches这个目录下的全部缓存文件，以此释放一些被占用的存储空间，增加可用存储空间，但删除前要确认删除这些文件所带来的影响。
+
+#### 使用过程可能遇到的问题
+**1. brew install xxx的时候会卡在Running `brew update --auto-update`...**
+~~~
+关闭自动更新
+echo 'export HOMEBREW_NO_AUTO_UPDATE=true' >> ~/.zshrc
+~~~
